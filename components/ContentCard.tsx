@@ -1,5 +1,5 @@
-import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, ImageOff } from 'lucide-react';
 import { ContentItem } from '../types';
 import { getScreenshotUrl } from '../utils/image';
 
@@ -10,7 +10,16 @@ interface Props {
 
 export const ContentCard: React.FC<Props> = ({ item, onClick }) => {
   // posterUrl이 있으면 사용하고, 없으면 url을 통해 자동으로 스크린샷을 생성합니다.
-  const imageUrl = item.posterUrl || getScreenshotUrl(item.url);
+  const [imgSrc, setImgSrc] = useState(item.posterUrl || getScreenshotUrl(item.url));
+  const [hasError, setHasError] = useState(false);
+
+  const handleError = () => {
+      if (!hasError) {
+          setHasError(true);
+          // 이미지 로드 실패 시 대체 이미지 (추상적인 배경)
+          setImgSrc('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop');
+      }
+  };
 
   return (
     <div 
@@ -19,14 +28,11 @@ export const ContentCard: React.FC<Props> = ({ item, onClick }) => {
     >
       {/* Background Image - Fills entire card */}
       <img
-        src={imageUrl}
+        src={imgSrc}
         alt={item.title}
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         loading="lazy"
-        onError={(e) => {
-          // 이미지 로드 실패 시 대체 이미지 (검은 배경 등) 처리가 가능하지만, 
-          // mshots는 실패 시 자체 에러 이미지를 보여주므로 그대로 둡니다.
-        }}
+        onError={handleError}
       />
 
       {/* Dark Gradient Overlay for text readability */}

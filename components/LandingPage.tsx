@@ -13,9 +13,10 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
   const [isMuted, setIsMuted] = useState(true);
   const [isAdded, setIsAdded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
-  // backdropUrl이 없으면 url을 이용해 자동 생성
-  const backdropImage = item.backdropUrl || getScreenshotUrl(item.url);
+  
+  // Image State
+  const initialImage = item.backdropUrl || getScreenshotUrl(item.url);
+  const [imgSrc, setImgSrc] = useState(initialImage);
 
   useEffect(() => {
     // Trigger animation on mount
@@ -29,6 +30,11 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
   const handleClose = () => {
       setIsVisible(false);
       setTimeout(onClose, 300); // Wait for animation
+  };
+
+  const handleImgError = () => {
+      // Fallback if backdrop fails
+      setImgSrc('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop');
   };
 
   return (
@@ -45,12 +51,13 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
         </button>
 
         {/* Hero Section of Modal */}
-        <div className="relative h-[60vh] w-full">
+        <div className="relative h-[60vh] w-full bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src={backdropImage}
+              src={imgSrc}
               alt={item.title}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover opacity-80"
+              onError={handleImgError}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/20 to-transparent" />
           </div>
