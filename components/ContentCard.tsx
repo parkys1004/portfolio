@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { ContentItem } from '../types';
+import { getScreenshotUrl } from '../utils/image';
 
 interface Props {
   item: ContentItem;
@@ -8,6 +9,9 @@ interface Props {
 }
 
 export const ContentCard: React.FC<Props> = ({ item, onClick }) => {
+  // posterUrl이 있으면 사용하고, 없으면 url을 통해 자동으로 스크린샷을 생성합니다.
+  const imageUrl = item.posterUrl || getScreenshotUrl(item.url);
+
   return (
     <div 
       className="group relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-gray-900 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
@@ -15,10 +19,14 @@ export const ContentCard: React.FC<Props> = ({ item, onClick }) => {
     >
       {/* Background Image - Fills entire card */}
       <img
-        src={item.posterUrl}
+        src={imageUrl}
         alt={item.title}
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         loading="lazy"
+        onError={(e) => {
+          // 이미지 로드 실패 시 대체 이미지 (검은 배경 등) 처리가 가능하지만, 
+          // mshots는 실패 시 자체 에러 이미지를 보여주므로 그대로 둡니다.
+        }}
       />
 
       {/* Dark Gradient Overlay for text readability */}

@@ -11,16 +11,11 @@ export const AI_CONTENTS: ContentItem[] = [
     description: '복잡한 업무 흐름을 AI가 분석하여 시각화해주는 B2B SaaS 솔루션의 메인 랜딩페이지입니다. 신뢰감을 주는 블루 톤과 깔끔한 그리드 레이아웃을 사용했습니다.',
     tags: ['#SaaS', '#B2B', '#Automation'],
     
-    // [이미지 변경 가이드]
-    // 현재는 화면이 깨지지 않도록 온라인 이미지를 넣어두었습니다.
-    // 로컬 이미지 사용 시:
-    // 1. 프로젝트 최상위 'public/img' 폴더에 'kyul.png' 파일을 넣으세요.
-    // 2. 아래 주석을 해제하고 온라인 주소를 지우세요.
-    // posterUrl: '/img/kyul.png',
-    posterUrl: '/public/img/kyul.png',
-    
+    // [이미지 자동 생성 가이드]
+    // posterUrl과 backdropUrl을 비워두거나 삭제하면,
+    // 아래 입력한 'url' 주소의 스크린샷이 자동으로 썸네일로 생성됩니다!
+    // posterUrl: '/img/kyul.png', 
     // backdropUrl: '/img/kyul.png',
-    backdropUrl: '/public/img/kyul.png',
     
     // [링크 변경 가이드]
     // url: 클릭 시 이동할 실제 사이트 주소를 여기에 입력하세요.

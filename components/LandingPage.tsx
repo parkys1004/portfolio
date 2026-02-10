@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { X, Play, Plus, Check, ThumbsUp, Volume2, VolumeX } from 'lucide-react';
 import { ContentItem } from '../types';
 import { ProviderLogo } from './ProviderLogo';
+import { getScreenshotUrl } from '../utils/image';
 
 interface Props {
   item: ContentItem;
@@ -12,6 +13,9 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
   const [isMuted, setIsMuted] = useState(true);
   const [isAdded, setIsAdded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
+  // backdropUrl이 없으면 url을 이용해 자동 생성
+  const backdropImage = item.backdropUrl || getScreenshotUrl(item.url);
 
   useEffect(() => {
     // Trigger animation on mount
@@ -44,7 +48,7 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
         <div className="relative h-[60vh] w-full">
           <div className="absolute inset-0">
             <img
-              src={item.backdropUrl}
+              src={backdropImage}
               alt={item.title}
               className="h-full w-full object-cover"
             />
@@ -71,9 +75,12 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-3">
-              <button className="flex items-center justify-center gap-2 rounded bg-white px-8 py-3 text-lg font-bold text-black transition-colors hover:bg-gray-200">
+              <button 
+                onClick={() => window.open(item.url, '_blank')}
+                className="flex items-center justify-center gap-2 rounded bg-white px-8 py-3 text-lg font-bold text-black transition-colors hover:bg-gray-200"
+              >
                 <Play className="h-6 w-6 fill-black" />
-                재생
+                사이트 방문
               </button>
               <button 
                 onClick={() => setIsAdded(!isAdded)}
@@ -106,44 +113,47 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
                 </p>
             </div>
             <div className="border-t border-gray-800 pt-6">
-                 <h3 className="text-xl font-bold text-white mb-4">회차 정보</h3>
+                 <h3 className="text-xl font-bold text-white mb-4">주요 특징</h3>
                  <div className="space-y-4">
-                     {[1, 2, 3].map((ep) => (
-                         <div key={ep} className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-800 cursor-pointer transition-colors group">
-                             <div className="text-2xl font-bold text-gray-500 group-hover:text-white">{ep}</div>
-                             <div className="h-20 w-32 bg-gray-700 rounded overflow-hidden relative">
-                                 <img src={`https://picsum.photos/seed/${item.id}-${ep}/200/150`} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" alt={`Episode ${ep}`} />
-                                 <div className="absolute inset-0 flex items-center justify-center">
-                                     <Play className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity fill-white" />
-                                 </div>
-                             </div>
-                             <div className="flex-1">
-                                 <h4 className="text-white font-bold mb-1">에피소드 {ep}</h4>
-                                 <p className="text-sm text-gray-400 line-clamp-2">이 에피소드에서는 주인공의 숨겨진 과거가 드러나며, 사건은 새로운 국면을 맞이하게 됩니다.</p>
-                             </div>
-                             <div className="text-gray-400 text-sm">54분</div>
+                     {/* Fake Episode List -> Features List */}
+                     <div className="flex items-center gap-4 p-4 rounded-lg bg-gray-900/50 border border-gray-800">
+                         <div className="flex-1">
+                             <h4 className="text-white font-bold mb-1">반응형 디자인</h4>
+                             <p className="text-sm text-gray-400">모바일, 태블릿, 데스크탑 등 모든 디바이스에 최적화된 레이아웃을 제공합니다.</p>
                          </div>
-                     ))}
+                     </div>
+                     <div className="flex items-center gap-4 p-4 rounded-lg bg-gray-900/50 border border-gray-800">
+                         <div className="flex-1">
+                             <h4 className="text-white font-bold mb-1">인터랙티브 요소</h4>
+                             <p className="text-sm text-gray-400">사용자의 행동에 반응하는 미세한 애니메이션과 전환 효과가 포함되어 있습니다.</p>
+                         </div>
+                     </div>
+                     <div className="flex items-center gap-4 p-4 rounded-lg bg-gray-900/50 border border-gray-800">
+                         <div className="flex-1">
+                             <h4 className="text-white font-bold mb-1">SEO 최적화</h4>
+                             <p className="text-sm text-gray-400">검색 엔진 최적화가 적용되어 있어 마케팅 성과를 극대화할 수 있습니다.</p>
+                         </div>
+                     </div>
                  </div>
             </div>
           </div>
 
           <div className="col-span-1 space-y-6 text-sm text-gray-400">
             <div>
-              <span className="block text-gray-500">출연:</span>
-              <span className="text-white">김철수, 이영희, 박지성, 손흥민</span>
+              <span className="block text-gray-500">카테고리:</span>
+              <span className="text-white">{item.category}</span>
             </div>
             <div>
-              <span className="block text-gray-500">장르:</span>
+              <span className="block text-gray-500">태그:</span>
               <span className="text-white">{item.tags.join(', ')}</span>
             </div>
             <div>
-              <span className="block text-gray-500">관람등급:</span>
+              <span className="block text-gray-500">연령 등급:</span>
               <span className="border border-gray-600 px-1 text-white">{item.ageRating}</span>
             </div>
             <div className="pt-4 mt-4 border-t border-gray-800">
                 <p className="text-xs text-gray-500">
-                    이 콘텐츠는 {item.provider === 'disney' ? 'Disney+' : 'Hulu'}에서 제공됩니다. 저작권은 각 제작사에 있습니다.
+                    이 콘텐츠는 {item.provider === 'disney' ? 'Disney+' : item.provider === 'hulu' ? 'Hulu' : 'Netflix'} 스타일의 쇼케이스입니다. 실제 저작권은 해당 웹사이트 소유자에게 있습니다.
                 </p>
             </div>
           </div>

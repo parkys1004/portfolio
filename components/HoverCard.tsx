@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Play, Plus, ThumbsUp, ChevronDown, Check } from 'lucide-react';
 import { ContentItem } from '../types';
+import { getScreenshotUrl } from '../utils/image';
 
 interface Props {
   item: ContentItem;
@@ -13,6 +14,9 @@ interface Props {
 export const HoverCard: React.FC<Props> = ({ item, position, onHover, onLeave, onClick }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
+
+  // 자동 이미지 생성
+  const backdropImage = item.backdropUrl || getScreenshotUrl(item.url);
 
   // Calculate position to center the expanded card over the original trigger
   const scale = 1.5;
@@ -48,7 +52,7 @@ export const HoverCard: React.FC<Props> = ({ item, position, onHover, onLeave, o
       {/* Top Media Area */}
       <div className="relative aspect-video w-full cursor-pointer group" onClick={onClick}>
         <img
-          src={item.backdropUrl}
+          src={backdropImage}
           alt={item.title}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
