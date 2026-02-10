@@ -7,7 +7,7 @@ export const AI_CONTENTS: ContentItem[] = [
   {
     id: '1',
     category: 'SaaS',
-    title: 'Flowchart AI - 업무 자동화 솔루션 랜딩페이지',
+    title: '살사인들의 썬데이 결소셜',
     description: '복잡한 업무 흐름을 AI가 분석하여 시각화해주는 B2B SaaS 솔루션의 메인 랜딩페이지입니다. 신뢰감을 주는 블루 톤과 깔끔한 그리드 레이아웃을 사용했습니다.',
     tags: ['#SaaS', '#B2B', '#Automation'],
     
@@ -17,10 +17,10 @@ export const AI_CONTENTS: ContentItem[] = [
     // 1. 프로젝트 최상위 'public/img' 폴더에 'kyul.png' 파일을 넣으세요.
     // 2. 아래 주석을 해제하고 온라인 주소를 지우세요.
     // posterUrl: '/img/kyul.png',
-    posterUrl: '/img/kyul.png',
+    posterUrl: '/public/img/kyul.png',
     
     // backdropUrl: '/img/kyul.png',
-    backdropUrl: '/img/kyul.png',
+    backdropUrl: '/public/img/kyul.png',
     
     // [링크 변경 가이드]
     // url: 클릭 시 이동할 실제 사이트 주소를 여기에 입력하세요.
