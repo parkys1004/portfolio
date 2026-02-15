@@ -37,8 +37,8 @@ export const AI_CONTENTS: ContentItem[] = [
     // 로컬 파일이 없으므로 온라인 이미지로 대체합니다.
     // 만약 로컬 파일을 사용하시려면 public/img/ 폴더에 yomi.png를 넣고 아래 주석을 해제하세요.
     // posterUrl: '/img/yomi.png',
-    posterUrl: '/public/img/yomi.png',
-    backdropUrl: '/public/img/yomi.png',
+    posterUrl: '/img/yomi.png',
+    backdropUrl: '/img/yomi.png',
     
     url: 'https://2026-lalala-yomi-lady-season-5.vercel.app/',
     provider: 'disney',
