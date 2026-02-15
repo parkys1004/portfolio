@@ -33,8 +33,13 @@ export const AI_CONTENTS: ContentItem[] = [
     title: '라라라 요미 레이디 시즌5 파티',
     description: '미니멀리즘을 지향하는 인테리어 소품 쇼핑몰입니다. 제품의 디테일이 돋보이도록 여백을 최대한 활용하고, 모던한 타이포그래피를 적용했습니다.',
     tags: ['#Shopping', '#Minimal', '#Interior'],
-    posterUrl: '/img/yomi.png',
-    backdropUrl: '/img/yomi.png',
+    
+    // 로컬 파일이 없으므로 온라인 이미지로 대체합니다.
+    // 만약 로컬 파일을 사용하시려면 public/img/ 폴더에 yomi.png를 넣고 아래 주석을 해제하세요.
+    // posterUrl: '/img/yomi.png',
+    posterUrl: 'https://images.unsplash.com/photo-1534349762942-eaef51f2f471?auto=format&fit=crop&w=800&q=80',
+    backdropUrl: 'https://images.unsplash.com/photo-1534349762942-eaef51f2f471?auto=format&fit=crop&w=1200&h=900&q=80',
+    
     url: 'https://2026-lalala-yomi-lady-season-5.vercel.app/',
     provider: 'disney',
     matchScore: 85,
