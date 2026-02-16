@@ -6,7 +6,7 @@ const DEMO_URL = "https://dribbble.com/";
 export const AI_CONTENTS: ContentItem[] = [
   {
     id: '1',
-    category: 'SaaS',
+    category: '이벤트/프로모션',
     title: '살사인들의 썬데이 결소셜',
     
     // [이미지 자동 생성 가이드]
@@ -23,7 +23,7 @@ export const AI_CONTENTS: ContentItem[] = [
   },
   {
     id: '2',
-    category: '이커머스',
+    category: '이벤트/프로모션',
     title: '라라라 요미 레이디 시즌5 파티',
     
     // 로컬 파일이 없으므로 온라인 이미지로 대체합니다.
@@ -36,7 +36,7 @@ export const AI_CONTENTS: ContentItem[] = [
   },
   {
     id: '3',
-    category: '기업',
+    category: '이벤트/프로모션',
     title: 'LALALA SALSA Spring Party',
     posterUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/SpringParty.jpg?raw=true',
     backdropUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/SpringParty.jpg?raw=true',
@@ -44,11 +44,11 @@ export const AI_CONTENTS: ContentItem[] = [
   },
   {
     id: '4',
-    category: '스타트업',
+    category: '이벤트/프로모션',
     title: '방구석 작곡가 Suno AI 가이드',
     posterUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/Suno%20AI.png?raw=true',
     backdropUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/Suno%20AI.png?raw=true',
-    url: DEMO_URL
+    url: 'https://corner-composer.vercel.app/'
   },
   {
     id: '5',
