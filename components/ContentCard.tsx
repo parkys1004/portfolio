@@ -59,15 +59,6 @@ export const ContentCard: React.FC<Props> = ({ item, onClick }) => {
               {item.title}
             </h3>
 
-             {/* Tags */}
-            <div className="flex flex-wrap gap-1.5 mb-4">
-               {item.tags.slice(0, 3).map((tag) => (
-                 <span key={tag} className="text-gray-200 text-[10px] font-medium bg-white/10 backdrop-blur-sm px-2 py-1 rounded">
-                   {tag}
-                 </span>
-               ))}
-            </div>
-
             {/* Visit Action - Appears on Hover */}
             <div className="flex items-center gap-2 text-white/90 text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-t border-white/20 pt-3">
                 <div className="bg-white text-black p-1.5 rounded-full">

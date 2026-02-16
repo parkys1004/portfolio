@@ -100,16 +100,6 @@ export const HoverCard: React.FC<Props> = ({ item, position, onHover, onLeave, o
         <div className="mb-2 flex items-center gap-2 text-xs font-bold text-gray-300 flex-wrap">
           <span className="rounded bg-white/20 px-1 text-[10px] text-white">HD</span>
         </div>
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-1">
-          {item.tags.map((tag, idx) => (
-            <React.Fragment key={tag}>
-                <span className="text-xs text-white/80">{tag}</span>
-                {idx < item.tags.length - 1 && <span className="text-gray-600 text-xs">•</span>}
-            </React.Fragment>
-          ))}
-        </div>
       </div>
     </div>
   );

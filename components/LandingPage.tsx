@@ -69,9 +69,6 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
 
             <div className="mb-6 flex items-center gap-4 text-sm font-medium text-gray-300">
               <span className="rounded bg-gray-700 px-1.5 py-0.5 text-xs text-white">HD</span>
-              {item.tags.slice(0, 3).map(tag => (
-                  <span key={tag} className="text-gray-400">• {tag}</span>
-              ))}
             </div>
 
             <div className="flex flex-col md:flex-row gap-3">
@@ -107,11 +104,6 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
         {/* Details Section */}
         <div className="grid grid-cols-1 gap-8 p-8 md:grid-cols-3 md:px-12 md:pb-12 bg-[#141414]">
           <div className="col-span-2">
-            <div className="mb-6">
-                <p className="text-lg leading-relaxed text-white">
-                {item.description}
-                </p>
-            </div>
             <div className="border-t border-gray-800 pt-6">
                  <h3 className="text-xl font-bold text-white mb-4">주요 특징</h3>
                  <div className="space-y-4">
@@ -141,10 +133,6 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
             <div>
               <span className="block text-gray-500">카테고리:</span>
               <span className="text-white">{item.category}</span>
-            </div>
-            <div>
-              <span className="block text-gray-500">태그:</span>
-              <span className="text-white">{item.tags.join(', ')}</span>
             </div>
           </div>
         </div>
