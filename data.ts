@@ -14,18 +14,14 @@ export const AI_CONTENTS: ContentItem[] = [
     // [이미지 자동 생성 가이드]
     // posterUrl과 backdropUrl을 비워두거나 삭제하면,
     // 아래 입력한 'url' 주소의 스크린샷이 자동으로 썸네일로 생성됩니다!
-    // posterUrl: '/img/kyul.png', 
-    // backdropUrl: '/img/kyul.png',
+    // posterUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/kyul.png?raw=true', 
+    // backdropUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/kyul.png?raw=true',
     
     // [링크 변경 가이드]
     // url: 클릭 시 이동할 실제 사이트 주소를 여기에 입력하세요.
     url: 'https://kyul-social.vercel.app/',
     
-    isNew: true,
-    provider: 'netflix',
-    matchScore: 98,
-    year: 2024,
-    ageRating: '전체'
+    isNew: true
   },
   {
     id: '2',
@@ -37,28 +33,20 @@ export const AI_CONTENTS: ContentItem[] = [
     // 로컬 파일이 없으므로 온라인 이미지로 대체합니다.
     // 만약 로컬 파일을 사용하시려면 public/img/ 폴더에 yomi.png를 넣고 아래 주석을 해제하세요.
     // posterUrl: '/img/yomi.png',
-    posterUrl: '/img/yomi.png',
-    backdropUrl: '/img/yomi.png',
+    posterUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/yomi.png?raw=true',
+    backdropUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/yomi.png?raw=true',
     
-    url: 'https://2026-lalala-yomi-lady-season-5.vercel.app/',
-    provider: 'disney',
-    matchScore: 85,
-    year: 2023,
-    ageRating: '12세'
+    url: 'https://2026-lalala-yomi-lady-season-5.vercel.app/'
   },
   {
     id: '3',
     category: '기업',
-    title: 'Next Gen Finance - 핀테크 기업 소개',
+    title: 'LALALA SALSA Spring Party',
     description: '글로벌 핀테크 기업의 브랜드 아이덴티티를 보여주는 기업 소개 페이지입니다. 역동적인 인터랙션과 데이터 시각화를 통해 기업의 성장성을 강조했습니다.',
     tags: ['#Fintech', '#Corporate', '#Finance'],
-    posterUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-    backdropUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'hulu',
-    matchScore: 92,
-    year: 2024,
-    ageRating: '15세'
+    posterUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/SpringParty.jpg?raw=true',
+    backdropUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/SpringParty.jpg?raw=true',
+    url: 'https://lalala-salsa-spring-party.vercel.app/'
   },
   {
     id: '4',
@@ -68,11 +56,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Eco', '#Startup', '#Green'],
     posterUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'netflix',
-    matchScore: 89,
-    year: 2023,
-    ageRating: '전체'
+    url: DEMO_URL
   },
   {
     id: '5',
@@ -82,11 +66,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Dashboard', '#Crypto', '#DarkUI'],
     posterUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'tvn',
-    matchScore: 95,
-    year: 2024,
-    ageRating: '19세'
+    url: DEMO_URL
   },
   {
     id: '6',
@@ -96,11 +76,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Event', '#Conference', '#3D'],
     posterUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'netflix',
-    matchScore: 99,
-    year: 2024,
-    ageRating: '전체'
+    url: DEMO_URL
   },
   {
     id: '7',
@@ -110,11 +86,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#AppLanding', '#Health', '#Mobile'],
     posterUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'disney',
-    matchScore: 88,
-    year: 2023,
-    ageRating: '전체'
+    url: DEMO_URL
   },
   {
     id: '8',
@@ -124,11 +96,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Portfolio', '#Personal', '#Gallery'],
     posterUrl: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'hulu',
-    matchScore: 91,
-    year: 2022,
-    ageRating: '12세'
+    url: DEMO_URL
   },
   {
     id: '9',
@@ -138,11 +106,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Collaboration', '#SaaS', '#RemoteWork'],
     posterUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'netflix',
-    matchScore: 87,
-    year: 2024,
-    ageRating: '전체'
+    url: DEMO_URL
   },
   {
     id: '10',
@@ -152,11 +116,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Food', '#Organic', '#Commerce'],
     posterUrl: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'disney',
-    matchScore: 94,
-    year: 2023,
-    ageRating: '전체'
+    url: DEMO_URL
   },
   {
     id: '11',
@@ -166,11 +126,7 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Architecture', '#Minimal', '#Grid'],
     posterUrl: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'tvn',
-    matchScore: 86,
-    year: 2021,
-    ageRating: '전체'
+    url: DEMO_URL
   },
   {
     id: '12',
@@ -180,10 +136,6 @@ export const AI_CONTENTS: ContentItem[] = [
     tags: ['#Space', '#Concept', '#Travel'],
     posterUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
     backdropUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL,
-    provider: 'netflix',
-    matchScore: 97,
-    year: 2050,
-    ageRating: '12세'
+    url: DEMO_URL
   }
 ];

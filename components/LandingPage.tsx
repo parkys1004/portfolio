@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { X, Play, Plus, Check, ThumbsUp, Volume2, VolumeX } from 'lucide-react';
 import { ContentItem } from '../types';
-import { ProviderLogo } from './ProviderLogo';
 import { getScreenshotUrl } from '../utils/image';
 
 interface Props {
@@ -63,18 +62,12 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-            <div className="mb-4">
-               <ProviderLogo provider={item.provider} className="text-3xl md:text-4xl shadow-black drop-shadow-lg" />
-            </div>
             
             <h1 className="mb-4 text-4xl md:text-6xl font-black text-white drop-shadow-lg leading-tight">
               {item.title}
             </h1>
 
             <div className="mb-6 flex items-center gap-4 text-sm font-medium text-gray-300">
-              <span className="text-green-400 font-bold">{item.matchScore}% 일치</span>
-              <span>{item.year}</span>
-              <span className="border border-gray-500 px-1.5 py-0.5 rounded text-xs">{item.ageRating}</span>
               <span className="rounded bg-gray-700 px-1.5 py-0.5 text-xs text-white">HD</span>
               {item.tags.slice(0, 3).map(tag => (
                   <span key={tag} className="text-gray-400">• {tag}</span>
@@ -122,7 +115,6 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
             <div className="border-t border-gray-800 pt-6">
                  <h3 className="text-xl font-bold text-white mb-4">주요 특징</h3>
                  <div className="space-y-4">
-                     {/* Fake Episode List -> Features List */}
                      <div className="flex items-center gap-4 p-4 rounded-lg bg-gray-900/50 border border-gray-800">
                          <div className="flex-1">
                              <h4 className="text-white font-bold mb-1">반응형 디자인</h4>
@@ -153,15 +145,6 @@ export const LandingPage: React.FC<Props> = ({ item, onClose }) => {
             <div>
               <span className="block text-gray-500">태그:</span>
               <span className="text-white">{item.tags.join(', ')}</span>
-            </div>
-            <div>
-              <span className="block text-gray-500">연령 등급:</span>
-              <span className="border border-gray-600 px-1 text-white">{item.ageRating}</span>
-            </div>
-            <div className="pt-4 mt-4 border-t border-gray-800">
-                <p className="text-xs text-gray-500">
-                    이 콘텐츠는 {item.provider === 'disney' ? 'Disney+' : item.provider === 'hulu' ? 'Hulu' : 'Netflix'} 스타일의 쇼케이스입니다. 실제 저작권은 해당 웹사이트 소유자에게 있습니다.
-                </p>
             </div>
           </div>
         </div>

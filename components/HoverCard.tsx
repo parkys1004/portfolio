@@ -98,9 +98,6 @@ export const HoverCard: React.FC<Props> = ({ item, position, onHover, onLeave, o
 
         {/* Metadata */}
         <div className="mb-2 flex items-center gap-2 text-xs font-bold text-gray-300 flex-wrap">
-          <span className="text-green-400 drop-shadow">{item.matchScore}% 일치</span>
-          <span className="border border-gray-500 px-1 text-[10px] rounded-sm">{item.ageRating}</span>
-          <span>{item.year}</span>
           <span className="rounded bg-white/20 px-1 text-[10px] text-white">HD</span>
         </div>
 
