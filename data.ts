@@ -33,8 +33,8 @@ export const AI_CONTENTS: ContentItem[] = [
     // 로컬 파일이 없으므로 온라인 이미지로 대체합니다.
     // 만약 로컬 파일을 사용하시려면 public/img/ 폴더에 yomi.png를 넣고 아래 주석을 해제하세요.
     // posterUrl: '/img/yomi.png',
-    posterUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/yomi.png?raw=true',
-    backdropUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/yomi.png?raw=true',
+    posterUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/yomi.png?raw=true',
+    backdropUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/yomi.png?raw=true',
     
     url: 'https://2026-lalala-yomi-lady-season-5.vercel.app/'
   },
@@ -44,8 +44,8 @@ export const AI_CONTENTS: ContentItem[] = [
     title: 'LALALA SALSA Spring Party',
     description: '글로벌 핀테크 기업의 브랜드 아이덴티티를 보여주는 기업 소개 페이지입니다. 역동적인 인터랙션과 데이터 시각화를 통해 기업의 성장성을 강조했습니다.',
     tags: ['#Fintech', '#Corporate', '#Finance'],
-    posterUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/SpringParty.jpg?raw=true',
-    backdropUrl: 'https://github.com/parkys1004/portfolio/blob/main/public/img/SpringParty.jpg?raw=true',
+    posterUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/SpringParty.jpg?raw=true',
+    backdropUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/SpringParty.jpg?raw=true',
     url: 'https://lalala-salsa-spring-party.vercel.app/'
   },
   {
