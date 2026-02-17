@@ -52,11 +52,11 @@ export const AI_CONTENTS: ContentItem[] = [
   },
   {
     id: '5',
-    category: '대시보드',
-    title: 'Crypto Analytics - 암호화폐 분석 대시보드',
-    posterUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80',
-    backdropUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&h=900&q=80',
-    url: DEMO_URL
+    category: '이벤트/프로모션',
+    title: 'ULAS OPEN PARTY',
+    posterUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/ulsan_open_party.png?raw=true',
+    backdropUrl: 'https://github.com/parkys1004/img/blob/main/K-Stream%20Promo/ulsan_open_party.png?raw=true',
+    url: 'https://ulas-open-party.vercel.app/'
   },
   {
     id: '6',
